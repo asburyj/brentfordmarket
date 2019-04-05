@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Farmers market dating back to 1306, in Brentford London, every Sunday 10am until 2pm" />
+    <meta name="robot" content="index,follow" />
+    <meta name="author" content="John Asbury"/>
+
+    <meta name="og:title" content="Brentford Market" />
+    <meta name="og:description" content="Farmers market dating back to 1306, in Brentford London, every Sunday 10am until 2pm" />
+    <meta name="og:image" content="https://brenfordmarket.uk/images/logo.svg" />
+    <meta name="og:type" content="company"/>
+    <meta name="og:url" content="https://brenfordmarket.uk" />
+    <meta name="og:site_name" content="Brentford Market" />
+
+    <link rel="alternate" href="https://brenfordmarket.uk" hreflang="en-gb" />
+    <link rel="canonical" href="https://brentfordmarket.uk" />
+
+    <title>Contact Brentford Market</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Ubuntu:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="./lib/fontawesome.css"/>
+    <link rel="stylesheet" href="./lib/brands.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+        integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+        crossorigin=""/>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="./styles/contact.css"/>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <span>
+                <a href="./index.html">
+                    <h2>
+                        Brentford Market
+                    </h2>
+                </a>
+            </span>           
+
+            <div class="nav-content">
+                <a href="./index.html">
+                    Home
+                </a>
+                <a href="./about.html">
+                    About
+                </a>
+                <a href="./contact.html">
+                    Contact
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="wrapper">
+            <div id="addForm-wrapper">
+                <div id="form">
+                    <form>
+                        <div class="form-title">
+                        </div>
+                        <div class="form-group">
+                            <label for="name"></label>
+                            <input type="text" name="name" id="name" class="form-input" />
+                        </div>
+                        <div class="form-group">
+                            <label for="subject"></label>
+                            <select class="form-input" id="subject" name="subject">
+                                <option value="complaint">
+                                    Complaint
+                                </option>
+                                <option value="inquiry">
+                                    Inquiry
+                                </option>
+                                <option value="other">
+                                    Other
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="email"></label>
+                            <input type="email" class="form-input" id="email" name="email" />
+                        </div>
+                        <div class="form-group">
+                            <label for="number">
+                                <span class="optional"></span>
+                            </label>
+                            <input type="tel" class="form-input" name="number" id="number" />
+                        </div>
+                        <div class="form-group">
+                            <label for="body"></label>
+                            <textarea class="form-input" id="body" name="body"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="button" class="submit" value="Contact Us"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="add-wrapper">
+                <span id="add-wrapper-inner">
+                    <h3>
+                        Address:
+                    </h3>
+                    <span>
+                        Market Place, Brentford High Street, TW8 8AH
+                    </span>
+                </span>
+            </div>
+            <div id="map-wrapper">
+    
+            </div>
+            <div id="social-wrapper">
+                <div id="inner-social-wrapper">
+                    <a id="twitter" href="">
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </a>                
+                    <a id="facebook" href="">
+                        <i class="fab fa-facebook-square fa-2x"></i>
+                    </a>
+                    <a id="instagram" href="">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+      integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="   
+      crossorigin=""
+      async>
+    </script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
+    <script async defer src="./lib/fontawesome.js"></script>
+    <script async defer src="./lib/brands.js"></script>
+    <script async defer src="./js/map.js"></script>
+</body>
+</html>

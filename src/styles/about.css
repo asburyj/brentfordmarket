@@ -1,0 +1,201 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #FFFFFF;
+    color: #3b444b;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(13, 1fr);
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    width: 100vw;
+}
+
+header {
+    background-color: #19647E;
+    padding-top: 2px;
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    grid-row: 1;
+}
+main {
+    grid-row: 2 / 14;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #3b444b;
+    background-color: #FFFFFF;
+}
+nav {
+    background-color: #FFFFFF;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    height: 97.5%;
+}
+nav > span {
+    grid-column: 1 / 4;
+    align-content: center;
+    text-indent: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+nav > span > a {
+    text-decoration: none;
+    color: #3b444b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    transition: ease-in;
+    transition-duration: .3s;
+}
+nav > span > a:hover {
+    color: #19647E;
+    transform: scale(1.1);
+}
+.nav-content {
+    grid-column: 4 / 9;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.nav-content > a {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-decoration: none;
+    color: #3b444b;
+    font-size: 18px;
+    transition: ease-in;
+    transition-duration: .3s;
+    font-weight: 600;
+}
+.nav-content > a:hover {
+    color: #19647E;
+    transform: scale(1.1);
+}
+
+#main-image {
+    width: 100vw;
+    height: 35vh;
+    background-position: left;
+    background-repeat: repeat;
+    background-size: cover;
+    background-image: url('../images/about-lg.webp');
+}
+
+#content {
+    width: auto;
+    padding: 0;
+    margin: 0;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    padding-top: 20px;
+    overflow-y: scroll;
+}
+#content > section {
+    margin-bottom: 10px;
+}
+
+#history > .title::before {
+    content: "History";
+}
+#people > .title::before {
+    content: "Market Manager";
+}
+section > .title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5em;
+    font-family: 'Ubuntu', sans-serif;
+}
+#people .image {
+    background-image: url('../images/deb.webp');
+    background-size: cover;
+    height: auto;
+    width: 150px;
+    margin-top: 5px;
+}
+#people .body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#people .text {
+    max-width: 60%;
+}
+
+.content > section {
+    margin-top: 10px;
+}
+
+@media (max-width: 1000px) {
+    #main-image {
+        background-image: url('../images/about.webp');
+    }
+}
+
+@media (max-width: 799px) {
+    #main-image {
+        background-image: url('../images/about-med.webp');
+    }
+
+    nav > span > a {
+        text-align: center;
+    }
+
+    nav > span {
+        text-indent: 0px;
+    }
+
+    .nav-content > a {
+        padding: 15px;
+    }
+
+    #people .image {
+        display: none;
+    }
+    #people .text {
+        max-width: 100%;
+    }
+    #people .body {
+        display: block;
+    }
+
+    #content {
+        width: auto;
+        margin-left: 0;
+        padding-left: 15vw;
+        padding-right: 15vw;
+    }
+}
+
+@media (max-width: 500px) {
+    #main-image {
+        background-image: url('../images/about-sm.webp');
+    }
+
+    .nav-content {
+        grid-column: 1 / 11;
+    }
+
+    .nav-content > a {
+        padding: 15px;
+    }
+
+    nav > span {
+        display: none;
+    }
+
+    #content {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+}

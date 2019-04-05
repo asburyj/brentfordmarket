@@ -1,0 +1,339 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #FFFFFF;
+    color: #3b444b;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(13, 1fr);
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    width: 100vw;
+}
+
+header {
+    background-color: #19647E;
+    padding-top: 2px;
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    grid-row: 1;
+}
+
+main {
+    grid-row: 2 / 14;
+    background-color: #FFFFFF;
+}
+
+#wrapper {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(10,1fr);
+}
+
+nav {
+    background-color: #FFFFFF;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    height: 97.5%;
+}
+
+nav > span {
+    grid-column: 1 / 4;
+    align-content: center;
+    text-indent: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+nav > span > a {
+    text-decoration: none;
+    color: #3b444b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    transition: ease-in;
+    transition-duration: .3s;
+}
+
+nav > span > a:hover {
+    color: #19647E;
+    transform: scale(1.1);
+}
+
+.nav-content {
+    grid-column: 4 / 9;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.nav-content > a {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-decoration: none;
+    color: #3b444b;
+    font-size: 18px;
+    transition: ease-in;
+    transition-duration: .3s;
+    font-weight: 600;
+}
+
+.nav-content > a:hover {
+    color: #19647E;
+    transform: scale(1.1);
+}
+
+#addForm-wrapper {
+    grid-row: 1 / 7;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 25px;
+}
+
+#add-wrapper {
+    grid-row: 7;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#add-wrapper-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#add-wrapper-inner > h3 {
+    color: #19647E;
+}
+
+#form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#form > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+    height: 90%;
+}
+#form > form > div.form-title::before {
+    font-size: 25px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    color: #19647E;
+    width: 100%;
+    padding-left: 40%;
+    padding-top: 20px;
+    content: 'Contact';
+}
+#form > form > div.form-group {
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+}
+#form > form > div.form-group:last-of-type {
+    border-bottom: none;
+}
+#form > form > div.form-group > input,
+#form > form > div.form-group > select,
+#form > form > div.form-group > textarea {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    line-height: 2em;
+    padding: 5px;
+    font-size: 18px;
+}
+#form > form > div.form-group > input:focus,
+#form > form > div.form-group > select:focus,
+#form > form > div.form-group > textarea:focus{
+    outline: none;
+}
+#form > form > div.form-group > label {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #19647E;
+}
+#form > form > div.form-group > input[type=button] {
+    padding: 20px;
+    background-color: #19647E;
+    color: #F0F8FF;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 22px;
+    transition: ease-in;
+    transition-duration: .25s;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 5px;
+}
+#form > form > div.form-group > input[type=button]:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+span.optional::before {
+    content: ' - optional';
+    color: rgba(0,0,0,0.15);
+    font-size: 14px;
+}
+
+label[for=name]::before {
+    content: 'What\'s your name?';
+}
+label[for=subject]::before {
+    content: 'What do wish to contact us about?';
+}
+label[for=email]::before {
+    content: 'What\'s your email address?';
+}
+label[for=number]::before {
+    content: 'What\'s your contact number?';
+}
+label[for=body]::before {
+    content: 'What do you want to tell us?';
+}
+
+#map-wrapper {
+    width: 100%;
+    grid-row: 8 / 10;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+#social-wrapper {
+    grid-row: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#inner-social-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100%;
+    width: 65%;
+}
+
+#inner-social-wrapper > a {
+    color: #3b444b;
+    transition: .2s;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+#inner-social-wrapper > a:hover {
+    transform: scale(1.5);
+}
+#inner-social-wrapper > a#twitter:hover {
+    color: #1DA1F2;
+}
+#inner-social-wrapper > a#facebook:hover {
+    color: #3b5998;
+}
+
+@media (max-width: 1500px) {
+    #form > form > div.form-group > input,
+    #form > form > div.form-group > select,
+    #form > form > div.form-group > textarea {
+        background-color: transparent;
+        border: none;
+        width: 100%;
+        line-height: 1.5em;
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    #form > form > div.form-group > input[type=button] {
+        padding: 10px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1000px) {
+    #form > form > div.form-group > input,
+    #form > form > div.form-group > select,
+    #form > form > div.form-group > textarea {
+        background-color: transparent;
+        border: none;
+        width: 100%;
+        line-height: 1.2em;
+        padding: 3px;
+        font-size: 10px;
+    }
+
+    #form > form > div.form-group > input[type=button] {
+        padding: 5px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 799px) {
+    nav > span > a {
+        text-align: center;
+    }
+
+    nav > span {
+        text-indent: 0px;
+    }
+
+    .nav-content > a {
+        padding: 15px;
+    }
+
+    #form > form > div.form-group > input,
+    #form > form > div.form-group > select,
+    #form > form > div.form-group > textarea {
+        background-color: transparent;
+        border: none;
+        width: 100%;
+        line-height: 1em;
+        padding: 1px;
+    }
+
+    label[for=name]::before {
+        content: 'Name';
+    }
+    label[for=subject]::before {
+        content: 'Subject';
+    }
+    label[for=email]::before {
+        content: 'Email';
+    }
+    label[for=number]::before {
+        content: 'Number';
+    }
+    label[for=body]::before {
+        content: 'Message';
+    }
+
+    #form > form > div.form-title::before {
+        content: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .nav-content {
+        grid-column: 1 / 11;
+    }
+
+    .nav-content > a {
+        padding: 15px;
+    }
+
+    nav > span {
+        display: none;
+    }
+}
